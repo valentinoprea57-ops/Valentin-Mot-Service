@@ -26,8 +26,16 @@
   <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center font-black text-slate-950 text-lg shadow-lg shadow-amber-500/20">
-          VO
+        <!-- OFFICIAL MOT LOGO ICON -->
+        <div class="w-11 h-11 rounded-xl bg-[#004d99] border border-blue-400/30 flex items-center justify-center p-1.5 shadow-md shadow-blue-900/30">
+          <svg viewBox="0 0 100 100" class="w-full h-full fill-white" aria-label="Official MOT Three Triangles Logo">
+            <!-- Top Triangle -->
+            <polygon points="50,12 28,47 72,47" />
+            <!-- Bottom Left Triangle -->
+            <polygon points="26,53 4,88 48,88" />
+            <!-- Bottom Right Triangle -->
+            <polygon points="74,53 52,88 96,88" />
+          </svg>
         </div>
         <div>
           <span class="text-base font-bold tracking-tight block">Valentin Oprea</span>
@@ -52,37 +60,65 @@
   <section class="relative overflow-hidden pt-12 pb-14 sm:pt-16 sm:pb-20 border-b border-slate-900">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.18),rgba(255,255,255,0))]"></div>
     <div class="max-w-6xl mx-auto px-4 relative">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-amber-400 text-xs font-semibold mb-5">
-          <i data-lucide="badge-check" class="w-4 h-4 text-emerald-400"></i>
-          DVSA Certified • Active MTS Account Ready
-        </div>
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight uppercase">
-          Keep Your MOT <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">Bay Running.</span>
-        </h1>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- INTRO STATEMENT FROM PHOTO -->
-        <div class="mt-6 p-5 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur">
-          <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-            "Hi mate, I'm <strong class="text-amber-400 font-bold">Valentin</strong>. I'm a local DVSA-certified MOT tester covering both <strong class="text-white underline decoration-amber-500 underline-offset-4 font-semibold">Class 4 and Class 7</strong> across Bristol and Bath."
-          </p>
-          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
-            I do freelance and emergency relief cover whenever your regular tester calls in sick, goes on annual leave, or if you've got a busy backlog. Pop my number in your phone so you never have to turn away bookings or lose bay revenue.
-          </p>
+        <!-- Left Content -->
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-amber-400 text-xs font-semibold mb-5">
+            <i data-lucide="badge-check" class="w-4 h-4 text-emerald-400"></i>
+            DVSA Certified • Active MTS Account Ready
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight uppercase">
+            Keep Your MOT <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">Bay Running.</span>
+          </h1>
+          
+          <!-- Pitch Statement -->
+          <div class="mt-6 p-5 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur">
+            <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+              "Hi mate, I'm <strong class="text-amber-400 font-bold">Valentin</strong>. I'm a local DVSA-certified MOT tester covering both <strong class="text-white underline decoration-amber-500 underline-offset-4 font-semibold">Class 4 and Class 7</strong> across Bristol and Bath."
+            </p>
+            <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+              I do freelance and emergency relief cover whenever your regular tester calls in sick, goes on annual leave, or if you've got a busy backlog. Pop my number in your phone so you never have to turn away bookings or lose bay revenue.
+            </p>
+          </div>
+
+          <!-- Fast Action Buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="tel:07367446973" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/25">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+              Call 07367 446973
+            </a>
+            <a href="https://wa.me/447367446973?text=Hi%20Valentin,%20are%20you%20available%20for%20MOT%20bay%20cover?" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition">
+              <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+              Message on WhatsApp
+            </a>
+          </div>
         </div>
 
-        <!-- FAST ACTION BUTTONS -->
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="tel:07367446973" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/25">
-            <i data-lucide="phone-call" class="w-4 h-4"></i>
-            Call 07367 446973
-          </a>
-          <a href="https://wa.me/447367446973?text=Hi%20Valentin,%20are%20you%20available%20for%20MOT%20bay%20cover?" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition">
-            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
-            Message on WhatsApp
-          </a>
+        <!-- Right MOT Badge Visual -->
+        <div class="lg:col-span-4 mt-4 lg:mt-0">
+          <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-800 text-center flex flex-col items-center shadow-xl">
+            <!-- Large MOT Blue Sign -->
+            <div class="w-32 h-32 rounded-2xl bg-[#004d99] border-2 border-blue-400/40 p-4 shadow-lg flex items-center justify-center mb-4">
+              <svg viewBox="0 0 100 100" class="w-full h-full fill-white" aria-label="Official MOT Symbol">
+                <polygon points="50,12 28,47 72,47" />
+                <polygon points="26,53 4,88 48,88" />
+                <polygon points="74,53 52,88 96,88" />
+              </svg>
+            </div>
+            <div class="text-xs uppercase tracking-wider font-extrabold text-blue-400 mb-1">Approved MOT Testing</div>
+            <h3 class="text-xl font-black tracking-tight text-white">Class 4 & Class 7</h3>
+            <p class="text-xs text-slate-400 mt-2">
+              Cars, Taxis, Light Commercials & Large Vans up to 3,500kg DGW.
+            </p>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 w-full flex items-center justify-center gap-2 text-xs text-emerald-400 font-semibold">
+              <i data-lucide="check-check" class="w-4 h-4"></i>
+              DVSA MTS Ready
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -133,7 +169,7 @@
     </div>
   </section>
 
-  <!-- KEY GARAGE BENEFITS & WHY WORK WITH ME -->
+  <!-- KEY GARAGE BENEFITS & COVERAGE AREA -->
   <section class="py-14 sm:py-20 border-b border-slate-900">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -177,7 +213,7 @@
           </div>
         </div>
 
-        <!-- QUICK GARAGE CALLOUT CARD -->
+        <!-- Local Response Area Card -->
         <div class="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 relative">
           <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
             <i data-lucide="map-pin" class="w-4 h-4"></i>
