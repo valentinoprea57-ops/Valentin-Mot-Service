@@ -139,8 +139,8 @@
                 <i data-lucide="badge-percent" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white text-sm sm:text-base">Competitive Day & Half-Day Rates</h4>
-                <p class="text-slate-400 text-xs sm:text-sm mt-1">Clear, transparent invoicing. No hidden agency commissions or overhead costs.</p>
+                <h4 class="font-bold text-white text-sm sm:text-base">Transparent Day Rates</h4>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">£180/day (Class 4) or £220/day (Class 4 & 7). No agency fees or commission markups.</p>
               </div>
             </div>
 
@@ -180,15 +180,15 @@
           <div class="border-t border-slate-800 pt-6">
             <div class="flex items-center justify-between text-sm py-2 border-b border-slate-800/60">
               <span class="text-slate-400">Class 4 Testing (Cars & Light Vans)</span>
-              <span class="text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> Certified</span>
+              <span class="text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> £180 / Day</span>
             </div>
             <div class="flex items-center justify-between text-sm py-2 border-b border-slate-800/60">
-              <span class="text-slate-400">Class 7 Testing (3,000kg – 3,500kg)</span>
-              <span class="text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> Certified</span>
+              <span class="text-slate-400">Full Class 4 & 7 Cover (Up to 3,500kg)</span>
+              <span class="text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> £220 / Day</span>
             </div>
             <div class="flex items-center justify-between text-sm py-2">
               <span class="text-slate-400">Billing Setup</span>
-              <span class="text-amber-400 font-semibold">Self-Employed / Invoiced</span>
+              <span class="text-slate-200 font-semibold">Self-Employed / Invoiced</span>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
     </div>
   </section>
 
-  <!-- BOOKING SECTION (CALENDAR + FULL DAY + GARAGE + POSTCODE + WHATSAPP) -->
+  <!-- BOOKING SECTION -->
   <section id="booking-section" class="py-14 sm:py-20 border-b border-slate-900 bg-slate-900/40">
     <div class="max-w-2xl mx-auto px-4">
       <div class="text-center mb-10">
@@ -206,7 +206,7 @@
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">Book MOT Bay Cover</h2>
         <p class="text-slate-400 text-sm sm:text-base mt-2">
-          Select your required date and enter your garage details to send a booking request via WhatsApp.
+          Select your required date and coverage rate to send a booking request via WhatsApp.
         </p>
       </div>
 
@@ -225,18 +225,42 @@
           >
         </div>
 
-        <!-- STEP 2: COVERAGE TYPE (ONLY FULL DAY) -->
+        <!-- STEP 2: COVERAGE TYPE & PRICE SELECTION -->
         <div>
           <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center gap-2">
             <span class="w-5 h-5 rounded-full bg-amber-500 text-slate-950 text-xs flex items-center justify-center font-bold">2</span>
-            Coverage Type
+            Select Testing Class & Day Rate
           </label>
-          <div class="p-3.5 rounded-xl border border-amber-500/60 bg-amber-500/10 flex items-center justify-between text-sm">
-            <div class="flex items-center gap-2 text-white font-bold">
-              <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
-              Full Day Cover
-            </div>
-            <span class="text-xs text-amber-300 font-semibold bg-amber-500/20 px-2.5 py-1 rounded-lg">Standard Bay Shift</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            
+            <!-- Option 1: Class 4 Only -->
+            <button 
+              type="button" 
+              id="opt-class4" 
+              onclick="selectTier('Class 4 (Cars & Light Vans)', '£180 / day')" 
+              class="tier-btn p-4 rounded-xl border border-slate-800 bg-slate-950 text-left transition hover:border-slate-700 flex flex-col justify-between"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-bold text-white">Class 4 Only</span>
+                <span class="text-base font-extrabold text-amber-400">£180</span>
+              </div>
+              <p class="text-xs text-slate-400">Cars, taxis & small vans (Full Day Cover)</p>
+            </button>
+
+            <!-- Option 2: Full Class 4 & 7 -->
+            <button 
+              type="button" 
+              id="opt-class47" 
+              onclick="selectTier('Full Class 4 & 7 Cover', '£220 / day')" 
+              class="tier-btn p-4 rounded-xl border border-amber-500/80 bg-amber-500/10 text-left transition flex flex-col justify-between"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-bold text-white">Full Class 4 & 7</span>
+                <span class="text-base font-extrabold text-amber-400">£220</span>
+              </div>
+              <p class="text-xs text-slate-300">Cars + large vans up to 3,500kg (Full Day)</p>
+            </button>
+
           </div>
         </div>
 
@@ -261,26 +285,14 @@
               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 text-sm uppercase focus:outline-none focus:border-amber-500 transition"
             >
           </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Required Testing Class</label>
-            <select 
-              id="testing-class" 
-              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-amber-500 transition"
-            >
-              <option value="Both Class 4 & Class 7" selected>Both Class 4 & Class 7</option>
-              <option value="Class 4 (Cars & Light Vans)">Class 4 (Cars & Light Vans)</option>
-              <option value="Class 7 (Goods up to 3,500kg)">Class 7 (Goods up to 3,500kg)</option>
-            </select>
-          </div>
         </div>
 
         <!-- STEP 4: GUARANTEED CLICKABLE WHATSAPP BUTTON -->
         <div class="pt-4">
           <a 
-            id="whatsapp-submit-btn"
+            id="whatsapp-submit-btn" 
             href="https://wa.me/447367446973" 
-            target="_blank"
+            target="_blank" 
             class="w-full inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-2xl text-base transition shadow-xl shadow-emerald-500/20 active:scale-[0.99] cursor-pointer"
           >
             <i data-lucide="message-circle" class="w-6 h-6"></i>
@@ -294,53 +306,4 @@
 
   <!-- CLEAN COMPACT FOOTER -->
   <footer class="py-8 bg-slate-950 border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <div class="text-xs text-slate-500">
-        © 2026 Valentin Oprea. Freelance MOT Tester. Fully DVSA Compliant. Class 4 & Class 7.
-      </div>
-    </div>
-  </footer>
-
-  <!-- DYNAMIC WHATSAPP LINK SCRIPT -->
-  <script>
-    lucide.createIcons();
-
-    const dateInput = document.getElementById('booking-date');
-    const garageInput = document.getElementById('garage-name');
-    const postcodeInput = document.getElementById('garage-postcode');
-    const classSelect = document.getElementById('testing-class');
-    const submitBtn = document.getElementById('whatsapp-submit-btn');
-
-    // Default to today
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.min = today;
-    dateInput.value = today;
-
-    function updateWhatsAppUrl() {
-      const selectedDate = dateInput.value || today;
-      const garage = garageInput.value.trim() || 'Not specified';
-      const postcode = postcodeInput.value.trim() || 'Not specified';
-      const testClass = classSelect.value;
-
-      let msg = "Hi Valentin, I would like to book Full Day MOT bay cover.\n\n";
-      msg += "📅 Date: " + selectedDate + "\n";
-      msg += "⏰ Cover: Full Day Cover\n";
-      msg += "🏢 Garage: " + garage + "\n";
-      msg += "📍 Postcode: " + postcode + "\n";
-      msg += "🚗 Class: " + testClass + "\n\n";
-      msg += "Please let me know if you are available. Thank you!";
-
-      submitBtn.href = "https://wa.me/447367446973?text=" + encodeURIComponent(msg);
-    }
-
-    // Update dynamically whenever user types or changes an option
-    dateInput.addEventListener('change', updateWhatsAppUrl);
-    garageInput.addEventListener('input', updateWhatsAppUrl);
-    postcodeInput.addEventListener('input', updateWhatsAppUrl);
-    classSelect.addEventListener('change', updateWhatsAppUrl);
-
-    // Initial call on load
-    updateWhatsAppUrl();
-  </script>
-</body>
-</html>
+    <div class="max-w-6xl mx-
