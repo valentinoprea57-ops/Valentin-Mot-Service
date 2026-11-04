@@ -306,4 +306,68 @@
 
   <!-- CLEAN COMPACT FOOTER -->
   <footer class="py-8 bg-slate-950 border-t border-slate-900">
-    <div class="max-w-6xl mx-
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="text-xs text-slate-500">
+        © 2026 Valentin Oprea. Freelance MOT Tester. Fully DVSA Compliant. Class 4 & Class 7.
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC WHATSAPP LINK SCRIPT -->
+  <script>
+    lucide.createIcons();
+
+    const dateInput = document.getElementById('booking-date');
+    const garageInput = document.getElementById('garage-name');
+    const postcodeInput = document.getElementById('garage-postcode');
+    const submitBtn = document.getElementById('whatsapp-submit-btn');
+
+    const opt4 = document.getElementById('opt-class4');
+    const opt47 = document.getElementById('opt-class47');
+
+    let selectedTier = 'Full Class 4 & 7 Cover';
+    let selectedPrice = '£220 / day';
+
+    // Set today
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+    dateInput.value = today;
+
+    function selectTier(tier, price) {
+      selectedTier = tier;
+      selectedPrice = price;
+
+      if (tier.includes('Class 4 & 7')) {
+        opt47.className = "tier-btn p-4 rounded-xl border border-amber-500/80 bg-amber-500/10 text-left transition flex flex-col justify-between";
+        opt4.className = "tier-btn p-4 rounded-xl border border-slate-800 bg-slate-950 text-left transition hover:border-slate-700 flex flex-col justify-between";
+      } else {
+        opt4.className = "tier-btn p-4 rounded-xl border border-amber-500/80 bg-amber-500/10 text-left transition flex flex-col justify-between";
+        opt47.className = "tier-btn p-4 rounded-xl border border-slate-800 bg-slate-950 text-left transition hover:border-slate-700 flex flex-col justify-between";
+      }
+
+      updateWhatsAppUrl();
+    }
+
+    function updateWhatsAppUrl() {
+      const selectedDate = dateInput.value || today;
+      const garage = garageInput.value.trim() || 'Not specified';
+      const postcode = postcodeInput.value.trim() || 'Not specified';
+
+      let msg = "Hi Valentin, I would like to book MOT bay cover.\n\n";
+      msg += "📅 Date: " + selectedDate + "\n";
+      msg += "🚗 Service: " + selectedTier + " (" + selectedPrice + ")\n";
+      msg += "🏢 Garage: " + garage + "\n";
+      msg += "📍 Postcode: " + postcode + "\n\n";
+      msg += "Please let me know if this date is available. Thank you!";
+
+      submitBtn.href = "https://wa.me/447367446973?text=" + encodeURIComponent(msg);
+    }
+
+    dateInput.addEventListener('change', updateWhatsAppUrl);
+    garageInput.addEventListener('input', updateWhatsAppUrl);
+    postcodeInput.addEventListener('input', updateWhatsAppUrl);
+
+    updateWhatsAppUrl();
+  </script>
+</body>
+</html>
