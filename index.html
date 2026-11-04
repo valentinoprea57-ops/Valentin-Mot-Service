@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -26,15 +26,15 @@
   <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <!-- OFFICIAL MOT LOGO ICON -->
-        <div class="w-11 h-11 rounded-xl bg-[#004d99] border border-blue-400/30 flex items-center justify-center p-1.5 shadow-md shadow-blue-900/30">
-          <svg viewBox="0 0 100 100" class="w-full h-full fill-white" aria-label="Official MOT Three Triangles Logo">
-            <!-- Top Triangle -->
-            <polygon points="50,12 28,47 72,47" />
-            <!-- Bottom Left Triangle -->
-            <polygon points="26,53 4,88 48,88" />
-            <!-- Bottom Right Triangle -->
-            <polygon points="74,53 52,88 96,88" />
+        <!-- OFFICIAL VTS SIGN ICON -->
+        <div class="w-11 h-11 rounded-lg bg-[#0072ce] border border-blue-300/40 p-1 flex items-center justify-center shadow-md shadow-blue-950">
+          <svg viewBox="0 0 100 100" class="w-full h-full stroke-white fill-none" stroke-width="7" stroke-linejoin="round">
+            <!-- Top Triangle (Hollow) -->
+            <polygon points="50,14 30,48 70,48" />
+            <!-- Bottom Left Triangle (Hollow) -->
+            <polygon points="27,53 7,87 47,87" />
+            <!-- Bottom Right Triangle (Hollow) -->
+            <polygon points="73,53 53,87 93,87" />
           </svg>
         </div>
         <div>
@@ -60,10 +60,10 @@
   <section class="relative overflow-hidden pt-12 pb-14 sm:pt-16 sm:pb-20 border-b border-slate-900">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.18),rgba(255,255,255,0))]"></div>
     <div class="max-w-6xl mx-auto px-4 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         <!-- Left Content -->
-        <div class="lg:col-span-8">
+        <div class="lg:col-span-7">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-amber-400 text-xs font-semibold mb-5">
             <i data-lucide="badge-check" class="w-4 h-4 text-emerald-400"></i>
             DVSA Certified • Active MTS Account Ready
@@ -96,26 +96,34 @@
           </div>
         </div>
 
-        <!-- Right MOT Badge Visual -->
-        <div class="lg:col-span-4 mt-4 lg:mt-0">
-          <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-800 text-center flex flex-col items-center shadow-xl">
-            <!-- Large MOT Blue Sign -->
-            <div class="w-32 h-32 rounded-2xl bg-[#004d99] border-2 border-blue-400/40 p-4 shadow-lg flex items-center justify-center mb-4">
-              <svg viewBox="0 0 100 100" class="w-full h-full fill-white" aria-label="Official MOT Symbol">
-                <polygon points="50,12 28,47 72,47" />
-                <polygon points="26,53 4,88 48,88" />
-                <polygon points="74,53 52,88 96,88" />
+        <!-- Right VTS Official Plaque -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-sm rounded-3xl bg-[#0072ce] p-6 sm:p-7 shadow-2xl shadow-blue-950/80 border-4 border-white/20 text-center flex flex-col items-center">
+            
+            <!-- Real MOT Three Triangles (Hollow) -->
+            <div class="w-48 h-40 sm:w-56 sm:h-44 my-2 flex items-center justify-center">
+              <svg viewBox="0 0 100 100" class="w-full h-full stroke-white fill-transparent" stroke-width="6.5" stroke-linejoin="round">
+                <polygon points="50,14 30,48 70,48" />
+                <polygon points="27,53 7,87 47,87" />
+                <polygon points="73,53 53,87 93,87" />
               </svg>
             </div>
-            <div class="text-xs uppercase tracking-wider font-extrabold text-blue-400 mb-1">Approved MOT Testing</div>
-            <h3 class="text-xl font-black tracking-tight text-white">Class 4 & Class 7</h3>
-            <p class="text-xs text-slate-400 mt-2">
-              Cars, Taxis, Light Commercials & Large Vans up to 3,500kg DGW.
-            </p>
-            <div class="mt-4 pt-4 border-t border-slate-800/80 w-full flex items-center justify-center gap-2 text-xs text-emerald-400 font-semibold">
-              <i data-lucide="check-check" class="w-4 h-4"></i>
-              DVSA MTS Ready
+
+            <!-- Sign Labels matching official station sign -->
+            <div class="mt-2 text-white font-black tracking-wider text-base sm:text-lg uppercase">
+              Vehicle Testing Station
             </div>
+            <div class="text-blue-100 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase mt-0.5 opacity-90">
+              Approved by the Ministry of Transport
+            </div>
+
+            <!-- Certified Classes Pill inside the sign -->
+            <div class="mt-5 w-full bg-slate-950/80 backdrop-blur rounded-2xl py-3 px-4 border border-white/10 text-white">
+              <div class="text-xs uppercase tracking-wider text-amber-400 font-extrabold">Covering Both</div>
+              <div class="text-lg font-black tracking-tight mt-0.5">Class 4 & Class 7</div>
+              <div class="text-[11px] text-slate-300 mt-1">Cars, Taxis, Commercial Vans up to 3,500kg</div>
+            </div>
+
           </div>
         </div>
 
